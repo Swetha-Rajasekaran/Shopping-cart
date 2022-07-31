@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/**
+*  ! navbar styles
+**/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #94b49f;
+  color: black;
+  padding: 25px 60px;
+}
+
+.cart {
+  position: relative;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 30px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
