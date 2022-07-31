@@ -64,6 +64,7 @@ body {
 .item {
   border: 2px solid black;
   border-radius: 4px;
+  background-color: #fcf8e8;
 }
 
 .details {
