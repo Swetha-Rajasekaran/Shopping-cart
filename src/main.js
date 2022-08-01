@@ -1,36 +1,5 @@
 let shop = document.getElementById("shop");
 
-let shopItemsData = [
-  {
-    id: "one",
-    name: "Saree",
-    desc: "A beautiful red Silk Saree",
-    price: 1020,
-    img: "images/Saree.jpg",
-  },
-  {
-    id: "two",
-    name: "Hoodie",
-    desc: "A beautiful Hoodie",
-    price: 859,
-    img: "images/Hoodie.jpg",
-  },
-  {
-    id: "three",
-    name: "Jean",
-    desc: "Set of comfortable jean",
-    price: 1150,
-    img: "images/Jeans.jpg",
-  },
-  {
-    id: "four",
-    name: "Dress",
-    desc: "A beautiful dress",
-    price: 999,
-    img: "images/Dress.jpg",
-  },
-];
-
 let basket = JSON.parse(localStorage.getItem("key")) || [];
 
 let generateShop = () => {
@@ -73,20 +42,24 @@ let increment = (id) => {
   } else {
     search.item += 1;
   }
-  localStorage.setItem("key", JSON.stringify(basket));
   update(selectedItem.id);
+  localStorage.setItem("key", JSON.stringify(basket));
 };
+
 let decrement = (id) => {
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
-
-  if (search.item === 0) return;
+  if (search === undefined) return;
+  else if (search.item === 0) return;
   else {
     search.item -= 1;
   }
-  localStorage.setItem("key", JSON.stringify(basket));
+
   update(selectedItem.id);
+  basket = basket.filter((x) => x.item !== 0);
+  localStorage.setItem("key", JSON.stringify(basket));
 };
+
 let update = (id) => {
   let search = basket.find((x) => x.id === id);
   console.log(search.item);
