@@ -164,3 +164,23 @@ a {
   border-radius: 3px;
   padding: 3px 6px;
 }
+
+.checkout {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.removeAll {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+}
