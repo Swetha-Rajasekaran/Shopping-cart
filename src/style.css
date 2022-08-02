@@ -22,6 +22,7 @@ a {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #94b49f;
   color: black;
   padding: 25px 60px;
@@ -56,6 +57,7 @@ a {
   grid-template-columns: repeat(4, 223px);
   gap: 30px;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 1000px) {
@@ -74,6 +76,10 @@ a {
   border: 2px solid black;
   border-radius: 4px;
   background-color: #fcf8e8;
+}
+.item img {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
 }
 
 .details {
